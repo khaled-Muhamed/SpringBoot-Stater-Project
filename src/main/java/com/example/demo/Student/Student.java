@@ -21,6 +21,7 @@ public class Student {
     private String name;
     private String email;
     private LocalDate dob;
+    @Transient
     private Integer age;
 
     //a constructor with all data

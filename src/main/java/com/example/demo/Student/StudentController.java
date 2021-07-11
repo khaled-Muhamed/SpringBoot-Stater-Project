@@ -1,9 +1,7 @@
 package com.example.demo.Student;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -21,7 +19,12 @@ public class StudentController {
     }
 
     @GetMapping
-    public List<Student> getStudents(){
+    public List<Student> getStudents() {
         return studentSer.getStudents();
+    }
+
+    @PostMapping
+    public void addNewStudent(@RequestBody Student student){
+        studentSer.addNewStudent(student);
     }
 }
