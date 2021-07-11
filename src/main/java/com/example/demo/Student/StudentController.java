@@ -1,5 +1,6 @@
 package com.example.demo.Student;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -12,16 +13,15 @@ import java.util.List;
 @RequestMapping(path = "api/v1/students")
 public class StudentController {
 
+    @Autowired
+    private final StudentService studentSer;
+    
+    public StudentController(StudentService studentSer) {
+        this.studentSer = new StudentService();
+    }
+
     @GetMapping
     public List<Student> getStudents(){
-        List<Student> myList=  new ArrayList<>();
-        myList.add(new Student(
-                1L,
-                "Khaled Muhamed",
-                "khaled.m.abelghany@gmail.com",
-                LocalDate.of(1995,10,01),
-                26
-        ));
-        return myList;
+        return studentSer.getStudents();
     }
 }
