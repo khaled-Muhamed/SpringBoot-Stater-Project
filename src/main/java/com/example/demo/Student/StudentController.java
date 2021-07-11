@@ -17,7 +17,7 @@ public class StudentController {
     private final StudentService studentSer;
 
     public StudentController(StudentService studentSer) {
-        this.studentSer = new StudentService();
+        this.studentSer = studentSer;
     }
 
     @GetMapping
