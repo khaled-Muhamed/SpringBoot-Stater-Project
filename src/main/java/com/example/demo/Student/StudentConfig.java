@@ -17,14 +17,14 @@ public class StudentConfig {
           Student mariam =  new Student(
                     "mariam",
                     "mariam@gmail.com",
-                    LocalDate.of(2000, Month.JANUARY,5),
-                    21);
+                    LocalDate.of(2000, Month.JANUARY,5)
+                    );
 
             Student alex =  new Student(
                     "alex",
                     "alex@gmail.com",
-                    LocalDate.of(2004, Month.JANUARY,5),
-                    21);
+                    LocalDate.of(2004, Month.JANUARY,5)
+                    );
             List<Student> studentList = new ArrayList<>();
             studentList.add(mariam);studentList.add(alex);
 
