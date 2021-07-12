@@ -10,6 +10,7 @@ import java.util.Optional;
 public interface StudentRepository
         extends JpaRepository<Student,Long> {
 
+//Notice: lazm eli b3d FROM fe query msln "Student" tkon nfs spelling bta3 elclass Student
     @Query("SELECT s FROM Student s WHERE s.email = ?1")
     public Optional<Student> findStudentByEmail(String email);
 }

@@ -27,4 +27,17 @@ public class StudentController {
     public void addNewStudent(@RequestBody Student student){
         studentSer.addNewStudent(student);
     }
+
+    @DeleteMapping(path = "{studentId}")
+    public void deleteStudent(@PathVariable("studentId") long studentId){
+        studentSer.deleteStudentById(studentId);
+    }
+
+    @PutMapping(path = "{studentId}")
+    public void updateStudent(
+            @PathVariable("studentId") long studentId,
+            @RequestParam(required = false) String name,
+            @RequestParam(required = false) String email){
+        studentSer.updateStudent(studentId,name,email);
+    }
 }
