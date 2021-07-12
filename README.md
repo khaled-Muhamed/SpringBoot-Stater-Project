@@ -7,7 +7,7 @@ I used Postman to send and apply HTTP requests.
 
 ## Getting Started
 
-Just run the demo har file and got to "localhost:8080/api/v1/students" in your favourite browser 
+Just run the demo jar file and got to "localhost:8080/api/v1/students" in your favourite browser 
 make sure that you have postgres installed and modify the username and password in application.properties file 
 also check the port used in the url.
 
@@ -29,11 +29,16 @@ Intelliji  or Eclipse to import project and edit if you want.
  
 ## How to run
 
-Just run the demo har file and got to "localhost:8080/api/v1/students" in your favourite browser 
+Just run the demo jar file and got to "localhost:8080/api/v1/students" in your favourite browser 
 make sure that you have postgres installed and modify the username and password in application.properties file 
 also check the port used in the url.
 
-Now you can send requests and receive esponses.
+  *run in terminal the following command:
+
+    1- java -jar demo-0.0.1-SNAPSHOT.jar
+    2- proceed to "localhost:8080/api/v1/students"
+    3- start sending requests you need :).
+
 
 ## References 
   https://www.youtube.com/watch?v=9SGDpanrc8U&t=16s&ab_channel=Amigoscode
